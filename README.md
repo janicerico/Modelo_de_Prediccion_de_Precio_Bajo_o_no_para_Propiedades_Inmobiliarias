@@ -10,7 +10,7 @@
 <img src=https://user-images.githubusercontent.com/109157476/214588778-c726ed0a-2188-4d95-a010-bcb7fdb784ac.png>
 
 ## <h1 align=center> TEMA:
-# <h1 align=center> Modelo de Predicción de Precio Bajo o Alto para el área Inmobiliaria.
+# <h1 align=center> Modelo de Predicción de Precio Bajo o no, para Propiedades Inmobiliarias.
   
   ## <h1 align=center> INTRODUCCIÓN
  
@@ -19,6 +19,8 @@ Como parte del área de Machine Learning, una empresa inversora en bienes raíce
 <h1 align=center> DATOS
  
 2 tablas en formato parquet correspondientes a los datos para realizar el entrenamiento (22 columnas) y los datos para realizar el testeo y predicción (21 columnas).
+
+Dichas tablas se encuentras alojadas en el siguiente drive: https://drive.google.com/drive/folders/1-CepGNc6QMT1Ppq_z0N6BNvY2vsuVd_n?usp=share_link
   
 ## <h1 align=center> TRANSFORMACIONES REQUERIDAS (Procesos de EDA y ETL)
 
@@ -26,7 +28,7 @@ Antes de trabajar en los entrenamientos y prueba, los datos fueron sometidos a u
   
 Para ello se eliminaron columnas que no aportaban información tan relevante a la hora de entrenar el modelo, así como la eliminación de datos nulos. Del mismo modo, a partir de la columna "price", se generó una columna "is_low", para denotar si una propiedad tenía un precio bajo o no. Y por último, Las columnas que eran de tipo string se llevaron a un tipo de dato numérico para poder trabajar con el modelo.
   
-Todas estas transformaciones están detalladas en el cuaderno de Jupyter: "ETL, Machine Learning Model and Prediction.ipynb".
+Todas estas transformaciones están detalladas en el cuaderno de Jupyter: **"ETL, Machine Learning Model and Prediction.ipynb"**.
 
 ## <h1 align=center> MODELO DE MACHINE LEARNING UTILIZADO: Aprendizaje Supervisado - Regresión Logística
 
@@ -34,4 +36,4 @@ Se escogió este modelo de Regresión Logística, ya que es un método estadíst
 
 Inicialmente el dataset de train se dividió a su vez en train y test, para entrenar el modelo y luego hacer la predicción con parte del mismo (30%). Una vez obtenida una accurary (0.65) y un recall (0.61) aceptables, se procedió a realizar la predicción con el dataset original para testeo, dando como resultado una columna "pred" con ceros y unos, donde "is_low=1" pertecenecía a un rango de precios bajos, y "is_low=0" no pertenecía.
   
-Esa columna "pred" se convirtió en una serie y se exportó a un archivo .csv sin índice (janicerico.csv).
+Esa columna "pred" se convirtió en una serie y se exportó a un archivo .csv sin índice (**janicerico.csv**).
