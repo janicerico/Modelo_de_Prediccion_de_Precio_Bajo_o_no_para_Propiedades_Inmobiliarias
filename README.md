@@ -16,7 +16,7 @@
  
 Como parte del área de Machine Learning, una empresa inversora en bienes raíces solicitó un modelado que permita predecir si un inmueble tiene un precio Bajo o no, de acuerdo a diferentes variables como la ubicación y los diferentes servicios con los que cuenta, ya que como es muy bien sabido, estos valores se encuentran en constante cambio por múltiples factores que los afectan. Se desea detectar buenas oportunidades de inversión que llevarán posteriormente a mayor desarrollo inmobiliario, y por ende social.
 
-<h1 align=center> DATOS
+## <h1 align=center> DATOS
  
 2 tablas en formato parquet correspondientes a los datos para realizar el entrenamiento (22 columnas) y los datos para realizar el testeo y predicción (21 columnas).
 
